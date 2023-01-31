@@ -1,0 +1,42 @@
+.header{
+  &-container{
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+  &-content{
+    padding: 15px 15px;
+
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-link{
+
+  }
+
+  &-logo{
+    font-family: 'Misto', sans-serif;
+    font-size: 20px;
+  }
+}
+
+.flex-gap{
+  display: flex;
+  gap: 20px;
+  place-items: center;
+
+  &-sm{
+    gap: 10px;
+  }
+}
+
+.blurred{
+  backdrop-filter: blur(16px);
+}
+
+.fixed{
+  position: fixed;
+}

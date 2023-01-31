@@ -1,0 +1,65 @@
+.grid{
+  &-item{
+    width: 100%;
+    aspect-ratio: .75;
+    border: 1px solid #3f3f3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    &:hover::before{
+      opacity: 1;
+    }
+    &::before{
+      content: "";
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 2;
+      background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 500ms;
+    }
+
+    &__image-container{
+      width: 100%;
+      height: 60%;
+
+      position: relative;
+      display: inline-block;
+    }
+
+    &__image{
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      height: 200px;
+    }
+
+    &__text-container{
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      place-items: center;
+    }
+
+    &__name{
+      font-weight: 500;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    &__price{
+      font-weight: 100;
+      font-size: 12px;
+    }
+  }
+}

@@ -8,11 +8,8 @@ import {ShortBaseItemModel} from "../models/shortBaseItem.model";
   providedIn: 'root'
 })
 export abstract class ItemService {
-
   public abstract dataPath: string;
-
   protected data: ShortBaseItemModel[] = [];
-
   protected constructor(private http: HttpClient) {
   }
 
@@ -28,7 +25,6 @@ export abstract class ItemService {
       catchError(this.handleError)
     );
   }
-
 
   private handleError(err: HttpErrorResponse){
     if(err.error instanceof ErrorEvent){

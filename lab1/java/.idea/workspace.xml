@@ -9,7 +9,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a7d5fa0-978f-4871-9b22-2f3b32d8b894" name="Changes" comment="" />
+    <list default="true" id="4a7d5fa0-978f-4871-9b22-2f3b32d8b894" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JetBrainsMono-Bold.85073e758901e190.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JetBrainsMono-ExtraLight.2ac21f872bcdb669.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JetBrainsMono-Light.72a0defe08725a44.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JetBrainsMono-Regular.7d3c4340f5095fbe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Misto.19ed7cbb4afc6359.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Misto.2d4b89fb57b89c32.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Misto.40361251412269f9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Misto.a11f1f86b6832262.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Misto.b54deae61aee0681.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/jetbrains/JetBrainsMono-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/jetbrains/JetBrainsMono-ExtraLight.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/jetbrains/JetBrainsMono-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/jetbrains/JetBrainsMono-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/misto/Misto.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/misto/Misto.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/misto/Misto.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/misto/Misto.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/misto/Misto.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/main.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.203ec8194b0e57ab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/polyfills.d00ba71d24f64d98.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/runtime.231e96734c9fdc57.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles.f8c537a51336781f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/BaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Servlets/ArmorServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Servlets/HelmetServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/app/.angular/cache/14.2.10/angular-webpack/c9030723c352caaf967a7ddbe3bf24b4dfbb3832/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/app/.angular/cache/14.2.10/angular-webpack/c9030723c352caaf967a7ddbe3bf24b4dfbb3832/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/app/.angular/cache/14.2.10/angular-webpack/c9030723c352caaf967a7ddbe3bf24b4dfbb3832/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/app/.angular/cache/14.2.10/angular-webpack/c9030723c352caaf967a7ddbe3bf24b4dfbb3832/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/app/src/app/main/main.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/app/src/app/main/main.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/app/src/app/main/main.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/app/src/app/main/main.component.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +61,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -50,6 +92,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Abob/Desktop/back/lab1/java/src/main/webapp",
     "node.js.detected.package.eslint": "true",
@@ -113,8 +156,8 @@
       </option>
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/10.0.27" />
-          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/apache-tomcat/apache-tomcat-10.0.27" />
+          <option name="name" value="Apache Tomcat/10.0.27 (2)" />
+          <option name="path" value="$PROJECT_DIR$/../../../../../../Program Files/apache-tomcat/apache-tomcat-10.0.27" />
           <option name="version" value="10.0.27.0" />
         </TomcatInfo>
       </option>
@@ -148,6 +191,7 @@
       <workItem from="1675154881090" duration="9201000" />
       <workItem from="1675187981548" duration="1620000" />
       <workItem from="1675189873025" duration="675000" />
+      <workItem from="1675236173928" duration="3279000" />
     </task>
     <servers />
   </component>

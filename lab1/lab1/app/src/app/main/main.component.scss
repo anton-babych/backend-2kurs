@@ -184,6 +184,29 @@
   overflow: hidden;
   padding-top: 45px;
   margin: 20px;
+
+  width: fit-content;
+}
+
+.running{
+  &-left{
+    animation: scrollTextToLeft 8s infinite linear;
+    transition: all 1s;
+  }
+  &-right{
+    animation: scrollTextRight 5s infinite linear;
+    transition: all 1s;
+  }
+}
+
+@keyframes scrollTextToLeft {
+  from   { transform: translateX(0%); }
+  to { transform: translateX(-15%); }
+}
+
+@keyframes scrollTextRight {
+  from   { transform: translateX(-15%); }
+  to { transform: translateX(0%); }
 }
 
 .background-image{

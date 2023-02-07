@@ -1,0 +1,24 @@
+form{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 10%;
+}
+
+.buttons-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+label{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input{
+  width: 100%;
+}
+.ng-valid{
+  border-color: #155e09;
+}

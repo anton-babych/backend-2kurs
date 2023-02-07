@@ -1,0 +1,21 @@
+<div class="grid-item" #itemHTML
+     (mouseenter)="onMouseEnter()"
+     (mousemove)="onMouseMove($event)"
+     (mouseleave)="onMouseLeave()"
+     (click)="onClick()">
+  <div class="grid-item__image-container">
+    <img [src]="item.imagePath" alt="" class="grid-item__image">
+  </div>
+  <div class="grid-item__text-container">
+    <p class="grid-item__name">{{item.name}}</p>
+    <p class="grid-item__price">{{item.price}} грн</p>
+  </div>
+  <div *ngIf="buttonsVisible" class="grid-item__buttons">
+    <div class="grid-item__buttons__button grid-item__buttons__edit" (click)="onFormOpen()"></div>
+  </div>
+
+  <div class="form-container" *ngIf="formOpened">
+    <a class="form-container__button" (click)="onFormClose()"></a>
+    <item-form [item]="item" (itemEdited)="onFormFilled($event)"></item-form>
+  </div>
+</div>

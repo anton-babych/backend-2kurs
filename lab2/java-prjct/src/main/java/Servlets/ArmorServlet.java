@@ -1,7 +1,12 @@
 package Servlets;
 
+import Crud.ICrud;
+import Entities.ArmorEntity;
 import Entities.Entity;
+import Entities.HelmetEntity;
+import Services.Armor.ArmorService;
 import com.google.gson.Gson;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,15 +17,19 @@ import java.io.PrintWriter;
 
 @WebServlet("/api/armors")
 public class ArmorServlet extends HttpServlet {
+    final ICrud service;
+    private final IServletConfig config;
+
+    public ArmorServlet() {
+        super();
+
+        config = new FileServletConfig();
+        this.service = config.generateConfig(ServletConfig.EntityType.Armor);
+    }
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Entity[] data = {
-                new Entity("armor 1", 200, "https://ukrainianarmor.com/wp-content/uploads/2022/08/img_9185_edit-1024x1024-1-1.png"),
-                new Entity("armor 2", 20015, "https://ukrainianarmor.com/wp-content/uploads/2022/04/img_8931.png"),
-                new Entity("armor 3", 215, "https://ukrainianarmor.com/wp-content/uploads/2022/04/img_1317_lab-1024x1024-1.png"),
-                new Entity("armor 4", 15, "https://ukrainianarmor.com/wp-content/uploads/2022/07/2-2-1024x1024-1.png"),
-                new Entity("armor 5", 15, "https://ukrainianarmor.com/wp-content/uploads/2022/06/uarm_2020_new7165.png")
-        };
+        Entity[] data = service.read();
 
         PrintWriter out = response.getWriter();
         String someJson = new Gson().toJson(data);
@@ -31,5 +40,14 @@ public class ArmorServlet extends HttpServlet {
 
         out.print(someJson);
         out.flush();
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+        String json = request.getReader().lines().reduce("",String::concat);
+        Gson gson = new Gson();
+
+        ArmorEntity entity = gson.fromJson(json, ArmorEntity.class);
+        service.update(entity);
     }
 }

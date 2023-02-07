@@ -1,5 +1,9 @@
 package Servlets;
 
-public interface ServletConfig {
-    
+import Crud.ICrud;
+
+public interface IServletConfig {
+    ICrud generateConfig(ServletConfig.EntityType type);
+
+    ICrud readConfig();
 }

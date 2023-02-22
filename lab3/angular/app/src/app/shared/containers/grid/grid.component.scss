@@ -1,0 +1,35 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-rows: repeat(auto-fill, auto);
+  grid-gap: 1px;
+
+  justify-content: center;
+
+  &__empty{
+    width: 100%;
+    aspect-ratio: .75;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    border: 1px dashed white;
+    overflow: hidden;
+    &:hover{
+      border: 1px solid white;
+      .grid__empty__icon{
+        transform: rotateZ(360deg)
+      }
+    }
+    &__icon{
+      width: 4em;
+      aspect-ratio: 1;
+      background-image: url("/assets/icons/addIcon.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 1s;
+    }
+  }
+}

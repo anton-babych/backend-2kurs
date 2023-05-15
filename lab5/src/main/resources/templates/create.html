@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<h1 style="margin-bottom: 40px; font-size: 30px;">Create Item</h1>
+<br/>
+<form action="#" th:action="@{/create}" th:object="${helmet}" method="post">
+    <table cellpadding="10">
+        <tr>
+            <td>name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>description:</td>
+            <td><input type="text" th:field="*{description}"/></td>
+        </tr>
+        <tr>
+            <td>price:</td>
+            <td><input type="text" th:field="*{price}"/></td>
+        </tr>
+        <tr>
+            <td>image url</td>
+            <td><input type="text" th:field="*{image_url}"></td>
+        </tr>
+        <button type="submit">Add</button>
+    </table>
+</form>
+</body>
+</html>

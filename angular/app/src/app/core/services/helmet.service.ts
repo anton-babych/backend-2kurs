@@ -7,29 +7,27 @@ import {Helmet} from "../models/helmet";
   providedIn: 'root'
 })
 export abstract class HelmetService {
-  public abstract dataPath: string;
-  protected testData: Helmet[] = [];
-
-  data: BehaviorSubject<Helmet[]> = new BehaviorSubject<Helmet[]>(this.testData);
+  private readonly path: string = 'helmets';
+  data$: BehaviorSubject<Helmet[]> = new BehaviorSubject<Helmet[]>([]);
 
   protected constructor(private http: HttpClient) {}
 
-  read<Type extends Helmet>() : Observable<Type[]>{
-    if(this.data.value.length){
-      return of(this.data.value as Type[]);
+  read() : Observable<Helmet[]>{
+    if(this.data$.value.length){
+      return of(this.data$.value as Helmet[]);
     }
 
-    return this.http.get<Type[]>(`http://localhost:8080/api/${this.dataPath}`).pipe(
+    return this.http.get<Helmet[]>(`http://localhost:8080/api/${this.path}/read`).pipe(
       tap((payload) => {
-        this.data.next(payload);
+        this.data$.next(payload);
       }),
       catchError(this.handleError)
     );
   }
 
-  updateById<Type extends Helmet>(item: Helmet){
-    this.data.next(
-      this.data.value.map((a: Helmet) =>
+  updateById(item: Helmet){
+    this.data$.next(
+      this.data$.value.map((a: Helmet) =>
         a.id === item.id ? item : a
       )
     );
@@ -39,28 +37,28 @@ export abstract class HelmetService {
 
     let body = JSON.stringify(item);
 
-    this.http.put<Type>(`http://localhost:8080/api/${this.dataPath}`, body, {headers: headers})
+    this.http.put<Helmet>(`http://localhost:8080/api/${this.path}/update/${item.id}`, body, {headers: headers})
       .pipe(catchError(this.handleError))
   }
 
-  create<Type extends Helmet>(item: Helmet){
-    let dat = this.data.value;
+  create(item: Helmet){
+    let dat = this.data$.value;
     dat.push(item);
-    this.data.next(dat)
+    this.data$.next(dat)
 
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
 
     let body = JSON.stringify(item);
 
-    this.http.post<Type>(`http://localhost:8080/api/${this.dataPath}`, body, {headers: headers})
+    this.http.post<Helmet>(`http://localhost:8080/api/${this.path}/create`, body, {headers: headers})
       .pipe(catchError(this.handleError))
   }
 
-  delete<Type extends Helmet>(item: Helmet){
-    this.data.next(this.data.value.filter(x => x.id !== item.id))
+  delete(item: Helmet){
+    this.data$.next(this.data$.value.filter(x => x.id !== item.id))
 
-    this.http.delete<Type>(`http://localhost:8080/api/${this.dataPath}/${item.id}`)
+    this.http.delete<Helmet>(`http://localhost:8080/api/${this.path}/delete/${item.id}`)
       .pipe(catchError(this.handleError))
   }
 

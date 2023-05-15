@@ -48,11 +48,11 @@ export class GridComponent implements OnInit {
 
   constructor(private helmetService: HelmetService) {}
   ngOnInit(): void {
-    this.helmetService.read<Helmet>().subscribe(x => {
+    this.helmetService.read().subscribe(x => {
       this.data = x;
     });
 
-    this.helmetService.data.subscribe((data: Helmet[])=>{
+    this.helmetService.data$.subscribe((data: Helmet[])=>{
       this.data = data;
     })
   }

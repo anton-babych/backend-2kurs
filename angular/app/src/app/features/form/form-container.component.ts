@@ -111,7 +111,7 @@ export class FormContainerComponent implements AfterViewInit{
   onFormEdited(item: Helmet) {
     this.item = item;
 
-    this.helmetService.updateById<Helmet>(item);
+    this.helmetService.updateById(item);
 
     this.animate()
   }

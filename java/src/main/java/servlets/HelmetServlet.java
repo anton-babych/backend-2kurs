@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("*/api/helmets/")
+@WebServlet("/api/helmets/")
 public class HelmetServlet extends HttpServlet {
     private HelmetJdbcDao helmetDao;
     private Gson gson;

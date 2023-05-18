@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HelmetJdbcDao {
-    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/helmets";
-    private static final String JDBC_USERNAME = "anton";
+    private static final String JDBC_URL = "jdbc:postgresql:helmets";
+    private static final String JDBC_USERNAME = "postgres";
     private static final String JDBC_PASSWORD = "0000";
 
     public List<Helmet> getAllHelmets() {

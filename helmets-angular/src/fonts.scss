@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Misto';
+  src: url('assets/fonts/misto/Misto.eot');
+  src: url('assets/fonts/misto/Misto.eot') format('embedded-opentype'),
+  url('assets/fonts/misto/Misto.woff2') format('woff2'),
+  url('assets/fonts/misto/Misto.woff') format('woff'),
+  url('assets/fonts/misto/Misto.ttf') format('truetype'),
+  url('assets/fonts/misto/Misto.svg#Misto') format('svg');
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('assets/fonts/jetbrains/JetBrainsMono-ExtraLight.woff2') format('woff2');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('assets/fonts/jetbrains/JetBrainsMono-Light.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('assets/fonts/jetbrains/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('assets/fonts/jetbrains/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+}

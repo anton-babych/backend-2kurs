@@ -9,14 +9,13 @@ import {BehaviorSubject} from "rxjs";
   standalone: true,
   imports: [FormContainerComponent, CommonModule],
   template: `
-    <div class="grid__empty" (click)="onGridClick()">
-      <ng-template *ngIf="formIsVisible$ | async">
-        <form-container [item]="emptyItem"
-                        (isDone)="onFormIsDone()">
-        </form-container>
-      </ng-template>
-      <div class="grid__empty__icon"></div>
-    </div>
+      <div class="grid__empty" (click)="onGridClick()">
+          <form-container *ngIf="formIsVisible$ | async"
+                          [item]="emptyItem"
+                          (isDone)="onFormIsDone()">
+          </form-container>
+          <div class="grid__empty__icon"></div>
+      </div>
   `,
   styles: [`
     .grid__empty {
@@ -55,7 +54,8 @@ export class EmptyGridItemComponent implements OnInit {
   readonly emptyItem: Helmet = {description: "", image_url: "", name: "", price: 0};
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

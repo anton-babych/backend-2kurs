@@ -11,9 +11,9 @@ import {HelmetService} from "../../core/services/helmet.service";
   template: `
 
     <div class="grid">
-      <ng-template *ngIf="data">
+      <ng-container *ngIf="data">
         <grid-item *ngFor="let item of data" [item]="item"></grid-item>
-      </ng-template>
+      </ng-container>
       <empty-grid-item></empty-grid-item>
     </div>
     <!--(click)="handleCreate()"-->

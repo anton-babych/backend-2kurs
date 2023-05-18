@@ -12,17 +12,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/api/helmets/")
+@WebServlet("/api/helmets/*")
 public class HelmetServlet extends HttpServlet {
-    private HelmetJdbcDao helmetDao;
-    private Gson gson;
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        helmetDao = new HelmetJdbcDao();
-        gson = new Gson();
-    }
+    private final HelmetJdbcDao helmetDao = new HelmetJdbcDao();
+    private final Gson gson = new Gson();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
